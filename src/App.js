@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Home from './Home/Home.js';
+import './App.css'
 
-function App() {
+const App = () => {
+  const businessName = "Smith's Electrical Services";
+  const services = [
+    { title: "Residential Wiring", description: "Our residential wiring services ensure that your home’s electrical systems are safe, efficient, and up to code. From new installations to repairs and upgrades, we provide reliable solutions that keep your home powered and protected.", imageUrl: "https://i.imgur.com/qycP4fr.jpg" },
+    { title: "Commercial Electrical", description: "We specialize in commercial wiring for businesses of all sizes, offering tailored solutions that meet industry standards and safety requirements. Whether it’s new construction or an upgrade to existing systems, our expert technicians deliver efficient, high-quality service.", imageUrl: "https://i.imgur.com/i3wq2hl.jpg" },
+    { title: "Emergency Services", description: "Our emergency services are available 24/7 to address any urgent electrical issues you may encounter. With quick response times and skilled professionals, we’re committed to restoring your power and ensuring your safety when you need it most.", imageUrl: "https://i.imgur.com/H0LBs95.jpg" },
+  ];
+  const phone = "(555) 123-4567";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Home 
+      businessName={businessName}
+      services={services}
+      phone={phone}
+    />
   );
-}
+};
 
 export default App;
